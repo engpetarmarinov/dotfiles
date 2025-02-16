@@ -15,6 +15,7 @@ brew 'go'
 brew 'nvim'
 brew 'htop'
 brew 'helm'
+brew 'coreutils'
 
 cask 'docker'
 cask 'google-chrome'
