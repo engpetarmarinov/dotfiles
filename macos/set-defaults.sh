@@ -23,6 +23,10 @@ defaults write com.apple.dock autohide -bool true
 # Automatically hide the menu bar in macOS for all apps
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
 
+# Disable natural scrolling
+defaults write -g com.apple.swipescrolldirection -bool false
+
 # Apply changes
 killall Dock
 killall Finder
+killall SystemUIServer
