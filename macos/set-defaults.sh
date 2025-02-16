@@ -17,6 +17,12 @@ defaults write NSGlobalDomain _HIHideMenuBar -bool true
 # Disable natural scrolling
 defaults write -g com.apple.swipescrolldirection -bool false
 
+# Fast animations
+defaults write com.apple.dock mineffect -string scale
+defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock showhidden -bool true
+
 # Apply changes
 killall Dock
 killall Finder

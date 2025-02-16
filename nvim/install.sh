@@ -3,6 +3,8 @@
 NVIM_CONFIG="$HOME/.config/nvim"
 DOTFILES_NVIM="$HOME/.dotfiles/nvim"
 
+mkdir -p "$NVIM_CONFIG"
+
 if [ -e "$NVIM_CONFIG" ]; then
     echo "Removing existing Neovim config: $NVIM_CONFIG"
     rm -rf "$NVIM_CONFIG"
