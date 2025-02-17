@@ -16,6 +16,7 @@ brew 'nvim'
 brew 'htop'
 brew 'helm'
 brew 'coreutils'
+brew 'tldr'
 
 cask 'ghostty'
 cask 'vlc'
