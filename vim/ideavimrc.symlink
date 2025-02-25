@@ -41,8 +41,12 @@ map gi <Action>(GotoImplementation)
 map gr <Action>(FindUsages)
 
 "" move statements
-map <A-S-j> <Action>(MoveLineDown)
-map <A-S-k> <Action>(MoveLineUp)
+nmap <A-S-j> <Action>(MoveLineDown)
+nmap <A-S-k> <Action>(MoveLineUp)
+vmap <A-S-j> <Action>(MoveLineDown)
+vmap <A-S-k> <Action>(MoveLineUp)
+imap <A-S-j> <Action>(MoveLineDown)
+imap <A-S-k> <Action>(MoveLineUp)
 "" yank to system clipboard
 set clipboard+=unnamedplus
 "" toggle rendering of whitespaces
