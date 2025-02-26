@@ -1,0 +1,11 @@
+# Vi motions
+setw -g mode-keys vi
+# Enter copy mode with Prefix + v
+bind v copy-mode
+set-option -g set-clipboard on
+set -g mouse on
+set-option -g base-index 1
+# Start selection with v (instead of Space)
+bind -T copy-mode-vi v send-keys -X begin-selection
+# Copy selection with y (instead of Enter)
+bind -T copy-mode-vi y send-keys -X copy-selection-and-cancel
