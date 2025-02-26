@@ -1001,6 +1001,7 @@ vim.keymap.set("i", "<A-S-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move current lin
 vim.keymap.set("i", "<A-S-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move current line down" })
 -- Neotree
 vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle Neotree" })
+vim.keymap.set("n", "<leader>f", ":Neotree reveal<CR>", { desc = "Neotree reveal file", noremap = true, silent = true })
 vim.keymap.set("n", "<leader>gs", ":Neotree float git_status<CR>", { desc = "Neotree git status" })
 vim.opt.autoread = true
 
