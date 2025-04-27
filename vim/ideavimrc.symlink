@@ -51,3 +51,6 @@ imap <A-S-k> <Action>(MoveLineUp)
 set clipboard+=unnamedplus
 "" toggle rendering of whitespaces
 map <A-S-s> :set list!<CR>
+"" navigate between splits
+map <C-W>h <Action>(PreviousSplitter)
+map <C-W>l <Action>(NextSplitter)
