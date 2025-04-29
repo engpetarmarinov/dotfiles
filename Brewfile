@@ -18,6 +18,7 @@ brew 'mactop'
 brew 'helm'
 brew 'coreutils'
 brew 'tldr'
+brew 'koekeishiya/formulae/skhd'
 
 cask 'ghostty'
 cask 'vlc'
