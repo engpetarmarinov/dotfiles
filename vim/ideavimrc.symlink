@@ -48,7 +48,7 @@ vmap <A-S-k> <Action>(MoveLineUp)
 imap <A-S-j> <Action>(MoveLineDown)
 imap <A-S-k> <Action>(MoveLineUp)
 "" yank to system clipboard
-set clipboard+=unnamedplus
+"" set clipboard+=unnamedplus
 "" toggle rendering of whitespaces
 map <A-S-s> :set list!<CR>
 "" navigate between splits
