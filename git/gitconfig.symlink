@@ -43,3 +43,5 @@
 [url "ssh://git@git.acronis.com:7989/"]
         insteadOf = ssh://git@git.acronis.work:7989/
 
+[rerere]
+	enabled = true

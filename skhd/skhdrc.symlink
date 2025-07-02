@@ -6,4 +6,5 @@ alt - f5 : open -a "DataGrip"
 alt - f6 : open -a "Postman"
 alt - f7 : open -a "Microsoft Outlook"
 alt - f8 : open -a "Microsoft Teams"
+alt - f9 : open -a "Docker Desktop"
 
