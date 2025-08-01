@@ -1,0 +1,7 @@
+#!/bin/sh
+# git-fr: Fetch a pull request from the remote repository
+if [ -z "$1" ]; then
+  echo "Usage: git fr <PR number>"
+  exit 1
+fi
+git fetch real pull-requests/"$1"/from:PR"$1"
