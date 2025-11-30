@@ -460,7 +460,7 @@ require("lazy").setup({
 				auto_trigger = true,
 				hide_during_completion = vim.g.ai_cmp,
 				keymap = {
-					accept = "<Tab>", -- ✅ Accept with Tab
+					accept = "<Right>",
 					accept_word = false,
 					accept_line = false,
 					next = "<M-]>", -- optional: next suggestion
