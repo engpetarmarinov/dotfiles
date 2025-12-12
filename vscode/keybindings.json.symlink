@@ -1,0 +1,156 @@
+// Place your key bindings in this file to override the defaults
+[
+  // Move statements up/down with Alt+Shift+K/J (when not in Vim mode)
+  {
+    "key": "alt+shift+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly && !vim.active"
+  },
+  {
+    "key": "alt+shift+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly && !vim.active"
+  },
+
+  // Toggle whitespace rendering
+  {
+    "key": "alt+shift+s",
+    "command": "editor.action.toggleRenderWhitespace",
+    "when": "!vim.active"
+  },
+
+  // Navigate between editor groups (like splits in Vim)
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.focusLeftGroup",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.focusRightGroup",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "workbench.action.focusAboveGroup",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+w j",
+    "command": "workbench.action.focusBelowGroup",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+
+  // Quick fix / code actions (like IntelliJ's Alt+Enter)
+  {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+
+  // Go to definition (keeping IDE-like behavior)
+  {
+    "key": "cmd+b",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+
+  // Find usages (like IntelliJ's Alt+F7)
+  {
+    "key": "alt+f7",
+    "command": "references-view.findReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus"
+  },
+
+  // Rename symbol (like IntelliJ's Shift+F6)
+  {
+    "key": "shift+f6",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+
+  // Comment/uncomment line (Cmd+/ like IntelliJ)
+  {
+    "key": "cmd+/",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // Format code (like IntelliJ's Cmd+Alt+L on macOS)
+  {
+    "key": "cmd+alt+l",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+
+  // Optimize imports (like IntelliJ's Ctrl+Alt+O)
+  {
+    "key": "ctrl+alt+o",
+    "command": "editor.action.organizeImports",
+    "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+  },
+
+  // Recent files (like IntelliJ's Cmd+E)
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.quickOpen"
+  },
+
+  // Navigate back/forward (like IntelliJ)
+  {
+    "key": "cmd+alt+left",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "cmd+alt+right",
+    "command": "workbench.action.navigateForward"
+  },
+
+  // Toggle terminal (like IntelliJ's Alt+F12)
+  {
+    "key": "alt+f12",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+
+  // Toggle file explorer with Cmd+1 (like IntelliJ)
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+
+  // Toggle terminal with Cmd+3 (like IntelliJ)
+  {
+    "key": "cmd+3",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+
+  // Terminal tab management
+  // New terminal tab with Cmd+T (when terminal is focused)
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  // Close terminal tab with Cmd+W (when terminal is focused)
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  // Split terminal vertically with Cmd+D (when terminal is focused)
+  {
+    "key": "cmd+d",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+
+  // Search everywhere - Use Cmd+P (native VSCode) or Cmd+Shift+P for command palette
+  // Note: VSCode doesn't support "shift+shift" double-tap shortcuts
+  // Alternative: Use Cmd+T for "Go to Symbol in Workspace" (similar to IntelliJ's search)
+  {
+    "key": "cmd+shift+t",
+    "command": "workbench.action.showAllSymbols"
+  }
+]
+
+

@@ -1,0 +1,116 @@
+{
+  // Vim configuration
+  "vim.leader": "\\",
+  "vim.useSystemClipboard": false,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.scrolloff": 5,
+  "vim.relativenumber": true,
+
+  // Vim plugin configurations
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 200,
+
+  // Normal mode keybindings
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Go to implementation (matching IdeaVim 'gi')
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    // Find references/usages (matching IdeaVim 'gr')
+    {
+      "before": ["g", "r"],
+      "commands": ["references-view.findReferences"]
+    },
+    // Move line down (Alt+Shift+j)
+    {
+      "before": ["<A-S-j>"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    // Move line up (Alt+Shift+k)
+    {
+      "before": ["<A-S-k>"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    // Toggle whitespace rendering (Alt+Shift+s)
+    {
+      "before": ["<A-S-s>"],
+      "commands": ["editor.action.toggleRenderWhitespace"]
+    },
+    // Navigate to previous editor (Ctrl+W h)
+    {
+      "before": ["<C-w>", "h"],
+      "commands": ["workbench.action.previousEditorInGroup"]
+    },
+    // Navigate to next editor (Ctrl+W l)
+    {
+      "before": ["<C-w>", "l"],
+      "commands": ["workbench.action.nextEditorInGroup"]
+    }
+  ],
+
+  // Visual mode keybindings
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Move lines down (Alt+Shift+j)
+    {
+      "before": ["<A-S-j>"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    // Move lines up (Alt+Shift+k)
+    {
+      "before": ["<A-S-k>"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }
+  ],
+
+  // Insert mode keybindings
+  "vim.insertModeKeyBindings": [
+    // Move line down (Alt+Shift+j)
+    {
+      "before": ["<A-S-j>"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    // Move line up (Alt+Shift+k)
+    {
+      "before": ["<A-S-k>"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }
+  ],
+
+  // Enable commentary (tpope/vim-commentary equivalent)
+  "vim.commentary": true,
+
+  // VSCode editor settings to match GoLand behavior
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 5,
+  "editor.find.seedSearchStringFromSelection": "selection",
+
+  // Go-specific settings (since you use GoLand)
+  "go.useLanguageServer": true,
+  "go.toolsManagement.autoUpdate": true,
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "mule.homeDirectory": "/Users/petar.marinov/AnypointCodeBuilder",
+  "mule.controlPlane": "US Cloud",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "**/src/main/mule/**/*.xml": "mulesoft.projectFile.canvas",
+    "{git,gitlens}:/**/src/main/mule/**/*.xml": "default",
+    "**/src/test/munit/**/*.xml": "mulesoft.projectFile.munitCanvas",
+    "{git,gitlens}:/**/src/test/munit/**/*.xml": "default"
+  },
+  "remote.restoreForwardedPorts": false,
+  "remote.portsAttributes": {
+    "6666": {
+      "onAutoForward": "ignore",
+      "host": "127.0.0.1"
+    }
+  },
+  "chat.tools.terminal.ignoreDefaultAutoApproveRules": true
+}
+

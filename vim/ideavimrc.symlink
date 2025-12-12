@@ -54,3 +54,9 @@ map <A-S-s> :set list!<CR>
 "" navigate between splits
 map <C-W>h <Action>(PreviousSplitter)
 map <C-W>l <Action>(NextSplitter)
+
+"" terminal management
+"" split terminal vertically - TODO: fix split, doesn't work
+map <D-d> <Action>(TW.SplitRight)
+"" close terminal tab
+map <D-w> <Action>(CloseContent)
