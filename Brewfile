@@ -4,7 +4,6 @@ tap 'homebrew/bundle'
 
 brew 'lazygit'
 brew 'lazydocker'
-brew 'ag'
 brew 'rg'
 brew 'fzf'
 brew 'kubectl'
