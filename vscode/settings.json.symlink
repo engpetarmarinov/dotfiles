@@ -121,6 +121,7 @@
   "editor.largeFileOptimizations": false,
   "claudeCode.preferredLocation": "panel",
   "debug.breakpointsView.presentation": "tree",
-  "editor.renderWhitespace": "all"
+  "editor.renderWhitespace": "all",
+  "git.confirmSync": false
 }
 
