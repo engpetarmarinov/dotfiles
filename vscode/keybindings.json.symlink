@@ -1,15 +1,41 @@
 // Place your key bindings in this file to override the defaults
 [
-  // Move statements up/down with Alt+Shift+K/J (when not in Vim mode)
+  // Move statements up/down with Alt+Shift+K/J (works in all vim modes)
   {
     "key": "alt+shift+k",
     "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly && !vim.active"
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
     "key": "alt+shift+j",
     "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly && !vim.active"
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // Navigate between panes with Alt+Shift+H/L
+  // Focus left pane in editor
+  {
+    "key": "alt+shift+h",
+    "command": "workbench.action.focusLeftGroup",
+    "when": "editorTextFocus"
+  },
+  // Focus right pane in editor
+  {
+    "key": "alt+shift+l",
+    "command": "workbench.action.focusRightGroup",
+    "when": "editorTextFocus"
+  },
+  // Focus left pane in terminal
+  {
+    "key": "alt+shift+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  // Focus right pane in terminal
+  {
+    "key": "alt+shift+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
   },
 
   // Toggle word wrap in editor and terminal
