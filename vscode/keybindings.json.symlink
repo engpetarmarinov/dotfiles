@@ -12,11 +12,23 @@
     "when": "editorTextFocus && !editorReadonly && !vim.active"
   },
 
-  // Toggle whitespace rendering
+  // Toggle word wrap in editor and terminal
+  {
+    "key": "alt+shift+w",
+    "command": "editor.action.toggleWordWrap",
+    "when": "editorTextFocus && !vim.active"
+  },
+  {
+    "key": "alt+shift+w",
+    "command": "workbench.action.terminal.toggleWrap",
+    "when": "terminalFocus"
+  },
+
+  // Toggle indentation visualization (spaces and tabs)
   {
     "key": "alt+shift+s",
     "command": "editor.action.toggleRenderWhitespace",
-    "when": "!vim.active"
+    "when": "editorTextFocus"
   },
 
   // Navigate between editor groups (like splits in Vim)
@@ -83,6 +95,23 @@
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
   },
 
+  // Git operations (like IntelliJ)
+  // Create new git branch with Cmd+Alt+N
+  {
+    "key": "cmd+alt+n",
+    "command": "git.branch"
+  },
+  // Switch branches with Cmd+Alt+S
+  {
+    "key": "cmd+alt+s",
+    "command": "git.checkout"
+  },
+  // Git add/stage with Cmd+Alt+A
+  {
+    "key": "cmd+alt+a",
+    "command": "git.stageAll"
+  },
+
   // Optimize imports (like IntelliJ's Ctrl+Alt+O)
   {
     "key": "ctrl+alt+o",
@@ -94,6 +123,12 @@
   {
     "key": "cmd+e",
     "command": "workbench.action.quickOpen"
+  },
+
+  // Open recent projects (like IntelliJ's Ctrl+Alt+Shift+O)
+  {
+    "key": "alt+shift+o",
+    "command": "workbench.action.openRecent"
   },
 
   // Navigate back/forward (like IntelliJ)
@@ -112,16 +147,48 @@
     "command": "workbench.action.terminal.toggleTerminal"
   },
 
-  // Toggle file explorer with Cmd+1 (like IntelliJ)
+  // Open file explorer with Cmd+1 (like IntelliJ)
   {
     "key": "cmd+1",
-    "command": "workbench.action.toggleSidebarVisibility"
+    "command": "workbench.view.explorer"
+  },
+
+  // Show bookmarks with Cmd+2 (like IntelliJ)
+  {
+    "key": "cmd+2",
+    "command": "workbench.view.extension.bookmarks"
   },
 
   // Toggle terminal with Cmd+3 (like IntelliJ)
   {
     "key": "cmd+3",
     "command": "workbench.action.terminal.toggleTerminal"
+  },
+
+  // Open git history with Cmd+9 (like IntelliJ)
+  {
+    "key": "cmd+9",
+    "command": "workbench.view.scm"
+  },
+
+  // Open git commit with Cmd+0 (like IntelliJ)
+  {
+    "key": "cmd+0",
+    "command": "workbench.view.scm"
+  },
+
+  // Open file to the side from explorer with Shift+Enter
+  {
+    "key": "shift+enter",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+
+  // Create new file in explorer with Ctrl+N
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
 
   // Terminal tab management
@@ -150,6 +217,54 @@
   {
     "key": "cmd+shift+t",
     "command": "workbench.action.showAllSymbols"
+  },
+
+  // Debugging keybindings (like IntelliJ)
+  // Toggle breakpoint with Space+B
+  {
+    "key": "space b",
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Stop debugging/running with Shift+F2
+  {
+    "key": "shift+f2",
+    "command": "workbench.action.debug.stop",
+    "when": "inDebugMode"
+  },
+  // Start debugging with Shift+F9
+  {
+    "key": "shift+f9",
+    "command": "workbench.action.debug.start"
+  },
+  // Start without debug (run) with Shift+F10
+  {
+    "key": "shift+f10",
+    "command": "workbench.action.debug.run"
+  },
+  // Step into with Shift+F7
+  {
+    "key": "f7",
+    "command": "workbench.action.debug.stepInto",
+    "when": "inDebugMode"
+  },
+  // Step over with F8
+  {
+    "key": "f8",
+    "command": "workbench.action.debug.stepOver",
+    "when": "inDebugMode"
+  },
+  // Step out with Shift+F8
+  {
+    "key": "shift+f8",
+    "command": "workbench.action.debug.stepOut",
+    "when": "inDebugMode"
+  },
+  // Continue with F9
+  {
+    "key": "f9",
+    "command": "workbench.action.debug.continue",
+    "when": "inDebugMode"
   }
 ]
 

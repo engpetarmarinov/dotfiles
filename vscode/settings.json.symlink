@@ -111,6 +111,16 @@
       "host": "127.0.0.1"
     }
   },
-  "chat.tools.terminal.ignoreDefaultAutoApproveRules": true
+  "chat.tools.terminal.ignoreDefaultAutoApproveRules": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "editor.largeFileOptimizations": false,
+  "claudeCode.preferredLocation": "panel",
+  "debug.breakpointsView.presentation": "tree",
+  "editor.renderWhitespace": "all"
 }
 

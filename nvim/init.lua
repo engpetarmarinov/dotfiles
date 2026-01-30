@@ -1130,3 +1130,7 @@ vim.keymap.set("n", "<A-S-s>", function()
 		vim.o.list = true
 	end
 end, { desc = "Toggle rendering of spaces and tabs" })
+
+-- vim.o.guifont = "JetBrains Mono:h14"
+vim.o.guifont = "JetBrainsMono Nerd Font:h14"
+

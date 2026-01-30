@@ -1,6 +1,8 @@
-theme = Afterglow 
-font-feature = -liga
-font-feature = -calt
+font-family = "JetBrains Mono"
+font-size = 14
+theme = Afterglow
+# background = #0E0E0E
+background-opacity = 1.0
 keybind = "shift+alt+h=goto_split:left"
 keybind = "shift+alt+l=goto_split:right"
 
