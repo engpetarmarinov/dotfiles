@@ -90,7 +90,12 @@
   {
     "key": "cmd+b",
     "command": "editor.action.revealDefinition",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor && isMac"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor && isLinux"
   },
 
   // Find usages (like IntelliJ's Alt+F7)
@@ -111,31 +116,59 @@
   {
     "key": "cmd+/",
     "command": "editor.action.commentLine",
-    "when": "editorTextFocus && !editorReadonly"
+    "when": "editorTextFocus && !editorReadonly && isMac"
+  },
+  {
+    "key": "ctrl+/",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly && isLinux"
   },
 
   // Format code (like IntelliJ's Cmd+Alt+L on macOS)
   {
     "key": "cmd+alt+l",
     "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor && isMac"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor && isLinux"
   },
 
   // Git operations (like IntelliJ)
   // Create new git branch with Cmd+Alt+N
   {
     "key": "cmd+alt+n",
-    "command": "git.branch"
+    "command": "git.branch",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "git.branch",
+    "when": "isLinux"
   },
   // Switch branches with Cmd+Alt+S
   {
     "key": "cmd+alt+s",
-    "command": "git.checkout"
+    "command": "git.checkout",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+alt+s",
+    "command": "git.checkout",
+    "when": "isLinux"
   },
   // Git add/stage with Cmd+Alt+A
   {
     "key": "cmd+alt+a",
-    "command": "git.stageAll"
+    "command": "git.stageAll",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+alt+a",
+    "command": "git.stageAll",
+    "when": "isLinux"
   },
 
   // Optimize imports (like IntelliJ's Ctrl+Alt+O)
@@ -148,7 +181,13 @@
   // Recent files (like IntelliJ's Cmd+E)
   {
     "key": "cmd+e",
-    "command": "workbench.action.quickOpen"
+    "command": "workbench.action.quickOpen",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.quickOpen",
+    "when": "isLinux"
   },
 
   // Open recent projects (like IntelliJ's Ctrl+Alt+Shift+O)
@@ -160,11 +199,23 @@
   // Navigate back/forward (like IntelliJ)
   {
     "key": "cmd+alt+left",
-    "command": "workbench.action.navigateBack"
+    "command": "workbench.action.navigateBack",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "workbench.action.navigateBack",
+    "when": "isLinux"
   },
   {
     "key": "cmd+alt+right",
-    "command": "workbench.action.navigateForward"
+    "command": "workbench.action.navigateForward",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "workbench.action.navigateForward",
+    "when": "isLinux"
   },
 
   // Toggle terminal (like IntelliJ's Alt+F12)
@@ -176,31 +227,61 @@
   // Open file explorer with Cmd+1 (like IntelliJ)
   {
     "key": "cmd+1",
-    "command": "workbench.view.explorer"
+    "command": "workbench.view.explorer",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "workbench.view.explorer",
+    "when": "isLinux"
   },
 
   // Show bookmarks with Cmd+2 (like IntelliJ)
   {
     "key": "cmd+2",
-    "command": "workbench.view.extension.bookmarks"
+    "command": "workbench.view.extension.bookmarks",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "workbench.view.extension.bookmarks",
+    "when": "isLinux"
   },
 
   // Toggle terminal with Cmd+3 (like IntelliJ)
   {
     "key": "cmd+3",
-    "command": "workbench.action.terminal.toggleTerminal"
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "isLinux"
   },
 
   // Open git history with Cmd+9 (like IntelliJ)
   {
     "key": "cmd+9",
-    "command": "workbench.view.scm"
+    "command": "workbench.view.scm",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+9",
+    "command": "workbench.view.scm",
+    "when": "isLinux"
   },
 
   // Open git commit with Cmd+0 (like IntelliJ)
   {
     "key": "cmd+0",
-    "command": "workbench.view.scm"
+    "command": "workbench.view.scm",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.view.scm",
+    "when": "isLinux"
   },
 
   // Open file to the side from explorer with Shift+Enter
@@ -222,19 +303,40 @@
   {
     "key": "cmd+t",
     "command": "workbench.action.terminal.new",
-    "when": "terminalFocus"
+    "when": "terminalFocus && isMac"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus && isLinux"
   },
   // Close terminal tab with Cmd+W (when terminal is focused)
   {
     "key": "cmd+w",
     "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus"
+    "when": "terminalFocus && isMac"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus && isLinux"
+  },
+  // Close editor tab with Ctrl+W on Linux
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus && isLinux"
   },
   // Split terminal vertically with Cmd+D (when terminal is focused)
   {
     "key": "cmd+d",
     "command": "workbench.action.terminal.split",
-    "when": "terminalFocus"
+    "when": "terminalFocus && isMac"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && isLinux"
   },
 
   // Search everywhere - Use Cmd+P (native VSCode) or Cmd+Shift+P for command palette
@@ -242,7 +344,13 @@
   // Alternative: Use Cmd+T for "Go to Symbol in Workspace" (similar to IntelliJ's search)
   {
     "key": "cmd+shift+t",
-    "command": "workbench.action.showAllSymbols"
+    "command": "workbench.action.showAllSymbols",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.showAllSymbols",
+    "when": "isLinux"
   },
 
   // Debugging keybindings (like IntelliJ)
@@ -293,5 +401,3 @@
     "when": "inDebugMode"
   }
 ]
-
-
