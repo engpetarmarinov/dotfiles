@@ -460,7 +460,7 @@ require("lazy").setup({
 				auto_trigger = true,
 				hide_during_completion = vim.g.ai_cmp,
 				keymap = {
-					accept = "<Right>",
+					accept = nil, -- handled by a conditional mapping below
 					accept_word = false,
 					accept_line = false,
 					next = "<M-]>", -- optional: next suggestion
@@ -1132,3 +1132,15 @@ end, { desc = "Toggle rendering of spaces and tabs" })
 
 -- vim.o.guifont = "JetBrains Mono:h14"
 vim.o.guifont = "JetBrainsMono Nerd Font:h14"
+
+-- Use Right-arrow in insert mode to accept Copilot suggestion if visible,
+-- otherwise behave like a normal Right keypress.
+vim.keymap.set("i", "<Tab>", function()
+	local ok, cop = pcall(require, "copilot.suggestion")
+	if ok and cop.is_visible and cop.is_visible() then
+		cop.accept()
+		return
+	end
+	local term = vim.api.nvim_replace_termcodes("<Tab>", true, false, true)
+	vim.api.nvim_feedkeys(term, "n", false)
+end, { noremap = true, silent = true })
