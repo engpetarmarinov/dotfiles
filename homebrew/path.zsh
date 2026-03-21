@@ -1,1 +1,4 @@
-export PATH="/opt/homebrew/bin:$PATH"
+# Homebrew path — macOS only
+if [[ "$(uname -s)" = "Darwin" ]]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi

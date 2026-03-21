@@ -6,8 +6,14 @@ set -e
 
 cd "$(dirname $0)"/..
 
-echo "› run all install.sh scripts"
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+# Install OS-level packages first
+if [ "$(uname -s)" = "Darwin" ]; then
+  echo "› brew bundle"
+  brew bundle
+elif [ -f /etc/debian_version ]; then
+  echo "› install linux packages"
+  ./linux/install-packages.sh
+fi
 
-echo "› brew bundle"
-brew bundle
+echo "› run all install.sh scripts"
+find . -name install.sh ! -path './linux/*' | while read installer ; do sh -c "${installer}" ; done
