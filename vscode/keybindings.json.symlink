@@ -399,5 +399,16 @@
     "key": "f9",
     "command": "workbench.action.debug.continue",
     "when": "inDebugMode"
+  },
+  // Find in current file (Cmd+F / Ctrl+F)
+  {
+    "key": "cmd+f",
+    "command": "actions.find",
+    "when": "editorFocus && isMac"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "actions.find",
+    "when": "editorFocus && isLinux"
   }
 ]
