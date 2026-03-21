@@ -115,6 +115,18 @@ if ! command -v google-chrome &>/dev/null; then
   rm -f /tmp/google-chrome.deb
 fi
 
+# Antigravity IDE (via apt repo)
+if ! command -v antigravity &>/dev/null; then
+  echo "  Installing Antigravity IDE..."
+  if [ ! -f /etc/apt/keyrings/antigravity-repo-key.gpg ]; then
+    sudo mkdir -p /etc/apt/keyrings
+    curl -fsSL https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/antigravity-debian/key | sudo gpg --dearmor -o /etc/apt/keyrings/antigravity-repo-key.gpg
+  fi
+  echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/ antigravity-debian main" | sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
+  sudo apt-get update -qq
+  sudo apt-get install -y -qq antigravity
+fi
+
 echo ""
 echo "✓ Linux packages installed!"
 echo ""
