@@ -298,6 +298,18 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
 
+  // Compare selected files in explorer with Cmd+D / Ctrl+D
+  {
+    "key": "cmd+d",
+    "command": "compareSelected",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && isMac"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "compareSelected",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && isLinux"
+  },
+
   // Terminal tab management
   // New terminal tab with Cmd+T (when terminal is focused)
   {
