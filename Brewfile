@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 
+brew 'bat'
 brew 'lazygit'
 brew 'lazydocker'
 brew 'rg'

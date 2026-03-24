@@ -63,6 +63,7 @@ install_if_missing htop      htop
 install_if_missing curl      curl
 install_if_missing xclip     xclip
 install_if_missing tldr      tldr
+install_if_missing batcat    bat
 
 # ─── Kubernetes tools ────────────────────────────────────────────────────────
 
