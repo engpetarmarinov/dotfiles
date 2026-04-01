@@ -111,9 +111,14 @@ fi
 # Google Chrome
 if ! command -v google-chrome &>/dev/null; then
   echo "  Installing Google Chrome..."
-  wget -q -O /tmp/google-chrome.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-  sudo apt-get install -y -qq /tmp/google-chrome.deb
-  rm -f /tmp/google-chrome.deb
+  ARCH=$(dpkg --print-architecture)
+  if [ "$ARCH" = "arm64" ]; then
+    echo "  Warning: Google Chrome does not officially support arm64 Linux. Skipping."
+  else
+    wget -q -O /tmp/google-chrome.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+    sudo apt-get install -y -qq /tmp/google-chrome.deb
+    rm -f /tmp/google-chrome.deb
+  fi
 fi
 
 # Antigravity IDE (via apt repo)
