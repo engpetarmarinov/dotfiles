@@ -124,6 +124,11 @@ fi
 # Antigravity IDE
 # Install manually from https://antigravity.google/ once official Linux packages are published.
 
+# Zoxide
+if ! command -v zoxide &>/dev/null; then
+  sudo apt install zoxide
+fi
+
 echo ""
 echo "✓ Linux packages installed!"
 echo ""
