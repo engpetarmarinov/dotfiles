@@ -19,6 +19,7 @@ brew 'helm'
 brew 'coreutils'
 brew 'tldr'
 brew 'koekeishiya/formulae/skhd'
+brew 'zoxide'
 
 cask 'ghostty'
 cask 'vlc'
