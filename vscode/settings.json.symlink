@@ -122,6 +122,7 @@
   "claudeCode.preferredLocation": "panel",
   "debug.breakpointsView.presentation": "tree",
   "editor.renderWhitespace": "all",
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "workbench.colorTheme": "Islands Dark"
 }
 
