@@ -42,7 +42,7 @@
   {
     "key": "alt+shift+w",
     "command": "editor.action.toggleWordWrap",
-    "when": "editorTextFocus && !vim.active"
+    "when": "editorTextFocus"
   },
   {
     "key": "alt+shift+w",
