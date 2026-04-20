@@ -38,16 +38,11 @@
     "when": "terminalFocus"
   },
 
-  // Toggle word wrap in editor and terminal
+  // Toggle word wrap in editor
   {
     "key": "alt+shift+w",
     "command": "editor.action.toggleWordWrap",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+shift+w",
-    "command": "workbench.action.terminal.toggleWrap",
-    "when": "terminalFocus"
   },
 
   // Toggle indentation visualization (spaces and tabs)
