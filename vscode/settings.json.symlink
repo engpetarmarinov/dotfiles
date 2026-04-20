@@ -13,6 +13,11 @@
 
   // Normal mode keybindings
   "vim.normalModeKeyBindingsNonRecursive": [
+    // Show LSP hover/docs popup (matching IdeaVim 'K')
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
     // Go to implementation (matching IdeaVim 'gi')
     {
       "before": ["g", "i"],
