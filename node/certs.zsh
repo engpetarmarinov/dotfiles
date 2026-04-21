@@ -1,0 +1,1 @@
+[[ -f $HOME/certs/acronis-root-ca-r2.pem ]] && export NODE_EXTRA_CA_CERTS=$HOME/certs/acronis-root-ca-r2.pem
