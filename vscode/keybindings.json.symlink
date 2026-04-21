@@ -407,6 +407,13 @@
     "command": "workbench.action.debug.continue",
     "when": "inDebugMode"
   },
+  // Navigate to next error/problem from LSP with F2
+  {
+    "key": "f2",
+    "command": "editor.action.marker.nextInFiles",
+    "when": "editorFocus"
+  },
+
   // Find in current file (Cmd+F / Ctrl+F)
   {
     "key": "cmd+f",

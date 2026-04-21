@@ -44,6 +44,9 @@ map gi <Action>(GotoImplementation)
 "" find usages
 map gr <Action>(FindUsages)
 
+"" go to next error/problem
+map <F2> <Action>(GotoNextError)
+
 "" move statements
 nmap <A-S-j> <Action>(MoveLineDown)
 nmap <A-S-k> <Action>(MoveLineUp)
