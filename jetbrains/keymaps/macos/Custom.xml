@@ -1,0 +1,5 @@
+<keymap version="1" name="Custom" parent="Mac OS X">
+  <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="meta 3" />
+  </action>
+</keymap>
