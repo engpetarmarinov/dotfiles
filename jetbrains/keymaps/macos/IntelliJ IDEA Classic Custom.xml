@@ -1,0 +1,8 @@
+<keymap version="1" name="IntelliJ IDEA Classic Custom" parent="Mac OS X">
+  <action id="ActivateFindToolWindow" />
+  <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="alt f12" />
+    <keyboard-shortcut first-keystroke="meta 3" />
+  </action>
+  <action id="FileChooser.GotoModule" />
+</keymap>
