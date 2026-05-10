@@ -1,8 +1,18 @@
 <keymap version="1" name="IntelliJ IDEA Classic Custom" parent="$default">
+  <action id="$LRU">
+    <keyboard-shortcut first-keystroke="shift alt o" />
+  </action>
   <action id="ActivateFindToolWindow" />
   <action id="ActivateTerminalToolWindow">
     <keyboard-shortcut first-keystroke="alt f12" />
     <keyboard-shortcut first-keystroke="control 3" />
   </action>
+  <action id="Editor LRU">
+    <keyboard-shortcut first-keystroke="shift alt o" />
+  </action>
   <action id="FileChooser.GotoModule" />
+  <action id="Git.Branches">
+    <keyboard-shortcut first-keystroke="control alt s" />
+  </action>
+  <action id="SelectVirtualTemplateElement" />
 </keymap>
