@@ -17,6 +17,11 @@ defaults write NSGlobalDomain _HIHideMenuBar -bool true
 # Disable natural scrolling
 defaults write -g com.apple.swipescrolldirection -bool false
 
+# Scroll wheel scaling. Keep this at the macOS default; a stray 0.125 was found
+# on this machine and it aggravates the macOS 26 discrete-wheel bug (see
+# linearmouse/install.sh). -1 does NOT disable scroll acceleration.
+defaults write -g com.apple.scrollwheel.scaling -float 0.4
+
 # Fast animations
 defaults write com.apple.dock mineffect -string scale
 defaults write com.apple.dock autohide-time-modifier -float 0
