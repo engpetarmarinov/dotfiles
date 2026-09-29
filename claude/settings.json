@@ -1,0 +1,9 @@
+{
+  "theme": "dark",
+  "remoteControlAtStartup": true,
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "hooks": {"SessionStart":[{"matcher":"^(startup|resume|clear|compact|fork)$","hooks":[{"type":"command","command":"bash '/home/petelord/.claude/hooks/herdr-agent-state.sh' session","timeout":10}]}]}
+}

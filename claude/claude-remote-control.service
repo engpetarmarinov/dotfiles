@@ -1,0 +1,21 @@
+[Unit]
+Description=Claude Code remote-control daemon
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=%h
+# Wait for DNS before connecting, same as the agy daemon
+ExecStartPre=/usr/bin/bash -c 'for i in $(seq 1 30); do getent hosts api.anthropic.com >/dev/null 2>&1 && exit 0; sleep 1; done; echo "Network connectivity timeout"; exit 1'
+# Login shell so spawned sessions get the normal PATH (node, mise, etc.)
+ExecStart=/usr/bin/zsh -lc 'exec claude remote-control --permission-mode bypassPermissions'
+Restart=always
+RestartSec=10s
+TimeoutStopSec=30s
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
