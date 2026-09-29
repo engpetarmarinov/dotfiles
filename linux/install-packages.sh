@@ -65,6 +65,12 @@ install_if_missing xclip     xclip
 install_if_missing tldr      tldr
 install_if_missing batcat    bat
 
+# Herdr (terminal multiplexer, no apt package)
+if ! command -v herdr &>/dev/null; then
+  echo "  Installing herdr..."
+  curl -fsSL https://herdr.dev/install.sh | sh
+fi
+
 # ─── Kubernetes tools ────────────────────────────────────────────────────────
 
 echo "› Installing Kubernetes tools..."

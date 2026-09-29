@@ -1,0 +1,10 @@
+# herdr — https://herdr.dev/docs/config-reference/
+# Replaces tmux. Mouse support, vi-style copy mode (v/Space select, y/Enter
+# copy, prefix+[ to enter) and clipboard integration are on by default.
+
+[keys]
+prefix = "ctrl+b"
+
+[ui]
+mouse_capture = true
+copy_on_select = true

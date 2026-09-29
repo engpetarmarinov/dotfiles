@@ -20,6 +20,7 @@ brew 'coreutils'
 brew 'tldr'
 brew 'koekeishiya/formulae/skhd'
 brew 'zoxide'
+brew 'herdr'
 
 cask 'ghostty'
 cask 'vlc'
