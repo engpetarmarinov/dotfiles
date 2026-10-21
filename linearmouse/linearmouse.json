@@ -1,13 +1,10 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.4",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.12.0",
   "schemes" : [
     {
       "if" : {
         "device" : {
-          "category" : "mouse",
-          "productID" : "0x3026",
-          "productName" : "Dell Mouse MS5320W",
-          "vendorID" : "0x413c"
+          "category" : "mouse"
         }
       },
       "scrolling" : {
@@ -19,13 +16,13 @@
         },
         "smoothed" : {
           "vertical" : {
-            "acceleration" : 0.10,
+            "acceleration" : 1.1,
             "bouncing" : true,
             "enabled" : true,
-            "inertia" : 0.10,
+            "inertia" : 0.74,
             "preset" : "easeInOut",
-            "response" : 0.06,
-            "speed" : 0.20
+            "response" : 0.68,
+            "speed" : 1.02
           }
         },
         "speed" : {

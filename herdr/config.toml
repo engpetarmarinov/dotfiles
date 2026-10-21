@@ -9,3 +9,4 @@ prefix = "ctrl+b"
 [ui]
 mouse_capture = true
 copy_on_select = true
+status_indicators = "dots"

@@ -21,6 +21,7 @@ brew 'tldr'
 brew 'koekeishiya/formulae/skhd'
 brew 'zoxide'
 brew 'herdr'
+brew 'python@3.13'
 
 cask 'ghostty'
 cask 'vlc'

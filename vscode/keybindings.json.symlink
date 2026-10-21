@@ -279,6 +279,17 @@
     "when": "isLinux"
   },
 
+  // Open selected file in explorer with Enter (instead of renaming)
+  {
+    "key": "enter",
+    "command": "-renameFile"
+  },
+  {
+    "key": "enter",
+    "command": "explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+
   // Open file to the side from explorer with Shift+Enter
   {
     "key": "shift+enter",

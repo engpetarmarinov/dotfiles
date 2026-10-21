@@ -128,6 +128,8 @@
   "debug.breakpointsView.presentation": "tree",
   "editor.renderWhitespace": "all",
   "git.confirmSync": false,
-  "workbench.colorTheme": "Islands Dark"
+  "workbench.colorTheme": "Islands Dark",
+  "kogito.swf.automaticallyOpenDiagramEditorAlongsideTextEditor": "Open automatically",
+  "makefile.configureOnOpen": true
 }
 
