@@ -1,0 +1,21 @@
+#!/bin/zsh
+#
+# Usage: claude-sessions [count]
+# Description: lists recent Claude Code sessions saved for the current dir,
+# newest first, including remote/phone ones (entrypoint sdk-cli) that the
+# `claude --resume` picker doesn't show. Resume one with `claude --resume <id>`.
+#
+# Remote sessions start in ~/devwork, so run it from there to find them.
+claude-sessions() {
+  local d=~/.claude/projects/$(pwd | sed 's|[/.]|-|g')
+  for f in $(ls -t $d/*.jsonl 2>/dev/null | head -${1:-15}); do
+    jq -rs --arg id "$(basename $f .jsonl)" '
+      ([.[]|select(.entrypoint)][0].entrypoint) as $e
+      | ([.[]|select(.type=="user" and (.message.content|type)=="string"
+           and (.message.content|startswith("<")|not))][0].message.content // ""
+         | gsub("\n";" ") | .[0:70]) as $p
+      | ([.[]|select(.timestamp)][-1].timestamp[0:16]) as $t
+      | select($t != null)
+      | "\($t)  \($e)  \($id)  \($p)"' $f
+  done
+}
