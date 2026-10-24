@@ -8,7 +8,7 @@ fi
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
-fpath=($ZSH/functions $fpath)
+fpath=($DOTFILES/functions $fpath)
 
 autoload -U $DOTFILES/functions/*(:t)
 
