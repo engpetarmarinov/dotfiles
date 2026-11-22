@@ -16,13 +16,13 @@
         },
         "smoothed" : {
           "vertical" : {
-            "acceleration" : 1.1,
+            "acceleration" : 0.34,
             "bouncing" : true,
             "enabled" : true,
-            "inertia" : 0.74,
+            "inertia" : 0.14,
             "preset" : "easeInOut",
-            "response" : 0.68,
-            "speed" : 1.02
+            "response" : 0.13,
+            "speed" : 0.13
           }
         },
         "speed" : {
