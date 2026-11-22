@@ -14,3 +14,5 @@ keybind = "ctrl+d=new_split:right"
 keybind = "shift+ctrl+d=new_split:down"
 keybind = "cmd+d=new_split:right"
 keybind = "shift+cmd+d=new_split:down"
+# OS-specific overrides; os.conf is created by install.sh (Linux -> linux.conf)
+config-file = ?os.conf

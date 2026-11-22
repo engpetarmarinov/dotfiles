@@ -6,3 +6,4 @@ herdr/*.log
 herdr/*.sock
 herdr/release-notes.json
 herdr/session.json
+ghostty/os.conf
