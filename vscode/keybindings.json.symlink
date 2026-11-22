@@ -357,9 +357,14 @@
     "when": "terminalFocus && isLinux"
   },
 
-  // Search everywhere - Use Cmd+P (native VSCode) or Cmd+Shift+P for command palette
-  // Note: VSCode doesn't support "shift+shift" double-tap shortcuts
-  // Alternative: Use Cmd+T for "Go to Symbol in Workspace" (similar to IntelliJ's search)
+  // Search everywhere with double-tap Shift (like IntelliJ's Shift Shift)
+  // Opens Quick Open: type a file name, or prefix with ">" for commands,
+  // "#" for workspace symbols, "@" for symbols in the current file
+  {
+    "key": "shift shift",
+    "command": "workbench.action.quickOpen"
+  },
+  // Go to Symbol in Workspace
   {
     "key": "cmd+shift+t",
     "command": "workbench.action.showAllSymbols",

@@ -6,6 +6,13 @@
   "vim.incsearch": true,
   "vim.scrolloff": 5,
   "vim.relativenumber": true,
+  // Let VS Code handle these instead of Vim:
+  //   Ctrl+A - select all (Vim: increment number)
+  //   Ctrl+V - paste (Vim: visual block mode; use Ctrl+Q for that instead)
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-v>": false
+  },
 
   // Vim plugin configurations
   "vim.highlightedyank.enable": true,
