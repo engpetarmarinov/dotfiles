@@ -289,6 +289,17 @@
     "command": "explorer.openAndPassFocus",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
   },
+  // Rename file/folder in explorer (like IntelliJ's Shift+F6), F2 as alternative
+  {
+    "key": "shift+f6",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "f2",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
 
   // Open file to the side from explorer with Shift+Enter
   {
@@ -363,6 +374,17 @@
   {
     "key": "shift shift",
     "command": "workbench.action.quickOpen"
+  },
+  // File structure (like IntelliJ's Cmd+F12) - symbols in current file
+  {
+    "key": "cmd+f12",
+    "command": "workbench.action.gotoSymbol",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+f12",
+    "command": "workbench.action.gotoSymbol",
+    "when": "isLinux"
   },
   // Go to Symbol in Workspace
   {
@@ -440,5 +462,11 @@
     "key": "ctrl+f",
     "command": "actions.find",
     "when": "editorFocus && isLinux"
+  },
+
+  // Find in all project files with Alt+Shift+F (in addition to default Cmd+Shift+F)
+  {
+    "key": "alt+shift+f",
+    "command": "workbench.action.findInFiles"
   }
 ]

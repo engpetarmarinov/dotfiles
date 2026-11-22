@@ -133,10 +133,12 @@
   "editor.largeFileOptimizations": false,
   "claudeCode.preferredLocation": "panel",
   "debug.breakpointsView.presentation": "tree",
-  "editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "none",
   "git.confirmSync": false,
   "workbench.colorTheme": "Islands Dark",
   "kogito.swf.automaticallyOpenDiagramEditorAlongsideTextEditor": "Open automatically",
-  "makefile.configureOnOpen": true
+  "makefile.configureOnOpen": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.statusBarItem.enabled": true
 }
 
