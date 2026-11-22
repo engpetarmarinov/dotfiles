@@ -1,0 +1,39 @@
+" ~/.vrapperrc - Vim motions in DBeaver via the Vrapper plugin.
+" Ported from the old .ideavimrc. Install Vrapper from:
+"   Help -> Install New Software -> https://vrapper.sourceforge.net/update-site/stable
+
+set scrolloff=5
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set number
+set relativenumber
+
+let mapleader=" "
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Map DBeaver actions (like IdeaVim <Action>(...)) ---
+eclipseaction sqlnav     org.jkiss.dbeaver.ui.editors.sql.navigate.object
+eclipseaction sqlformat  org.jkiss.dbeaver.ui.editors.text.content.format
+eclipseaction sqlrun     org.jkiss.dbeaver.ui.editors.sql.run.statement
+eclipseaction sqlscript  org.jkiss.dbeaver.ui.editors.sql.run.script
+eclipseaction sqlexplain org.jkiss.dbeaver.ui.editors.sql.run.explain
+eclipseaction sqlcomment org.jkiss.dbeaver.ui.editors.sql.comment.single
+eclipseaction linedown   org.eclipse.ui.edit.text.moveLineDown
+eclipseaction lineup     org.eclipse.ui.edit.text.moveLineUp
+
+" go to table/object under cursor (like gd / Cmd+B)
+nnoremap gd :sqlnav<cr>
+" commentary-style toggle comment
+nnoremap gcc :sqlcomment<cr>
+" leader actions
+nnoremap <leader>f :sqlformat<cr>
+nnoremap <leader>r :sqlrun<cr>
+nnoremap <leader>x :sqlscript<cr>
+nnoremap <leader>e :sqlexplain<cr>
+" move lines (Alt+Shift+Up/Down also works, see install.sh)
+nnoremap <leader>j :linedown<cr>
+nnoremap <leader>k :lineup<cr>
